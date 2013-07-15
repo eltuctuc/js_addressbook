@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>RE-Design &ndash; Adressbuch</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">RE-Design</a>
+                    <div class="nav-collapse collapse"></div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="span12">
+                    <header>
+                        <h1>Adressbuch</h1>
+                    </header>
+                    <section>
+                        <div id="messages"></div>
+                        <table class="table table-bordered">
+                            <tr>
+                                <th class="span3">Name</th>
+                                <td id="viewName" class="span9"></td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td id="viewEmail"></td>
+                            </tr>
+                            <tr>
+                                <th>Telefon</th>
+                                <td id="viewPhone"></td>
+                            </tr>
+                        </table>
+                    </section>
+                    <footer class="text-right">
+                        <nav class="btn-group">
+                            <button type="button" class="btn" id="backBtn"><i class="icon-chevron-left"></i></button>
+                            <button type="button" class="btn" id="editBtn"><i class="icon-pencil"></i></button>
+                            <button type="button" class="btn" id="deleteBtn"><i class="icon-remove"></i></button>
+                            <button type="button" class="btn" id="newBtn" data-toggle="modal" data-target="#myModal"><i class="icon-plus"></i></button>
+                            <button type="button" class="btn" id="nextBtn"><i class="icon-chevron-right"></i></button>
+                        </nav>
+                    </footer>
+                </div>
+            </div>
+
+            <hr>
+
+            <footer class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <p class="navbar-text pull-left">&copy; RE-Design 2012</p>
+                        <p class="navbar-text pull-right">Adressbuch v 1.0.0</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div> <!-- /container -->
+
+
+        <!-- Modal -->
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Neuer Kontakt</h3>
+            </div>
+            <div class="modal-body form-horizontal">
+                
+                <div class="control-group">
+                    <label class="control-label" for="inputName">Name</label>
+                    <div class="controls">
+                        <input type="text" id="inputNewName" placeholder="Vorname Nachname">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">Email</label>
+                    <div class="controls">
+                        <input type="text" id="inputNewEmail" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="inputPhonr">Phone</label>
+                    <div class="controls">
+                        <input type="text" id="inputNewPhone" placeholder="Telefon">
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Abbrechen</button>
+                <button class="btn btn-primary">Speichern</button>
+            </div>
+        </div> <!-- /modal -->        
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/ajax.js"></script>
+        <script src="js/application.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
